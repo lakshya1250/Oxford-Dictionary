@@ -7,7 +7,7 @@ import json
 # ----- Global Variables -----
 height = 500
 width = 800
-background_color = "#ffff00"
+background_color = "#FFFF00"
 
 # Get Your API Key From developer.oxforddictionaries.com
 # od-api.oxforddictionaries.com/api/v2/entries/{language}/{word}
