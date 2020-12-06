@@ -56,7 +56,7 @@ frame.place(relx=0.5, rely=0.1, relwidth=0.75, relheight=0.1, anchor='n')
 entry = tk.Entry(frame, font=("Times New Roman", 20))
 entry.place(relwidth=0.67, relheight=1)
 
-button = tk.Button(frame, text="Get Definiton", font=("Times New Roman", 20), command=lambda:get_define(entry.get()))
+button = tk.Button(frame, text="Get Definiton", font=("Times New Roman", 20), command=lambda:get_define(entry.get()), cursor="hand2")
 button.place(relx=0.69, relheight=1, relwidth=0.3)
 
 lower_frame = tk.Frame(root, bg=background_color, bd=10)
