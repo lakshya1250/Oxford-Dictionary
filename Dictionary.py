@@ -15,7 +15,7 @@ background_color = "#FFFF00"
 # ----- Functions -----
 def get_define(word):    
     """Gets The Definition From The Input"""
-    app_id = 'api_id'
+    app_id = 'app_id'
     app_key = 'api_key'
     language = 'en-us'
     toshow = ""
@@ -28,11 +28,11 @@ def get_define(word):
         for word in words:
             toshow += word.capitalize() + " "           
         if toshow[len(toshow)//2] != " ":
-            label["text"] = f"{toshow[0:len(toshow)//2]}\n{toshow[len(toshow)//2:-1]+toshow[-1]}"
+            label1["text"] = f"{toshow[0:len(toshow)//2]}\n{toshow[len(toshow)//2:-1]+toshow[-1]}"
         else:
-            label["text"] = f"{toshow[0:len(toshow)//2]}\n{toshow[(len(toshow)//2)+1:-1]+toshow[-1]}"
+            label1["text"] = f"{toshow[0:len(toshow)//2]}\n{toshow[(len(toshow)//2)+1:-1]+toshow[-1]}"
     else:
-        label["text"] = "There Was A Problem\nRetrieving That Information"
+        label1["text"] = "There Was A Problem\nRetrieving That Information"
     
 # ----- Main Code -----
 
@@ -50,20 +50,20 @@ background_label = tk.Label(root, image=background_image)
 background_label.place(relwidth=1, relheight=1)
 
 # Creating The Main Window
-frame = tk.Frame(root, bg=background_color, bd=5)
-frame.place(relx=0.5, rely=0.1, relwidth=0.75, relheight=0.1, anchor='n')
+frame1 = tk.Frame(root, bg=background_color, bd=5)
+frame1.place(relx=0.5, rely=0.1, relwidth=0.75, relheight=0.1, anchor='n')
 
-entry = tk.Entry(frame, font=("Times New Roman", 20))
-entry.place(relwidth=0.67, relheight=1)
+entry1 = tk.Entry(frame1, font=("Times New Roman", 20))
+entry1.place(relwidth=0.67, relheight=1)
 
-button = tk.Button(frame, text="Get Definiton", font=("Times New Roman", 20), command=lambda:get_define(entry.get()), cursor="hand2")
-button.place(relx=0.69, relheight=1, relwidth=0.3)
+button1 = tk.Button(frame1, text="Get Definiton", font=("Times New Roman", 20), command=lambda:get_define(entry.get()), cursor="hand2")
+button1.place(relx=0.69, relheight=1, relwidth=0.3)
 
-lower_frame = tk.Frame(root, bg=background_color, bd=10)
-lower_frame.place(relx=0.5, rely=0.25, relwidth=0.75, relheight=0.6, anchor='n')
+frame2 = tk.Frame(root, bg=background_color, bd=10)
+frame2.place(relx=0.5, rely=0.25, relwidth=0.75, relheight=0.6, anchor='n')
 
-label = tk.Label(lower_frame, font=("Courier",20))
-label.place(relwidth=1, relheight=1)
+label1 = tk.Label(frame2, font=("Courier",20))
+label1.place(relwidth=1, relheight=1)
 
 # ----- Driver Code -----
 if __name__ == "__main__":
